@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/tmc-tree/static/css/main.a2b7b0b6.chunk.css",
+    "main.js": "/tmc-tree/static/js/main.492efcbb.chunk.js",
+    "main.js.map": "/tmc-tree/static/js/main.492efcbb.chunk.js.map",
+    "runtime-main.js": "/tmc-tree/static/js/runtime-main.f23124d7.js",
+    "runtime-main.js.map": "/tmc-tree/static/js/runtime-main.f23124d7.js.map",
+    "static/js/2.8d0b91a2.chunk.js": "/tmc-tree/static/js/2.8d0b91a2.chunk.js",
+    "static/js/2.8d0b91a2.chunk.js.map": "/tmc-tree/static/js/2.8d0b91a2.chunk.js.map",
+    "index.html": "/tmc-tree/index.html",
+    "precache-manifest.3a03d957252cabd0221ee57533b59802.js": "/tmc-tree/precache-manifest.3a03d957252cabd0221ee57533b59802.js",
+    "service-worker.js": "/tmc-tree/service-worker.js",
+    "static/css/main.a2b7b0b6.chunk.css.map": "/tmc-tree/static/css/main.a2b7b0b6.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f23124d7.js",
+    "static/js/2.8d0b91a2.chunk.js",
+    "static/css/main.a2b7b0b6.chunk.css",
+    "static/js/main.492efcbb.chunk.js"
+  ]
+}

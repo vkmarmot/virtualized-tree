@@ -1,0 +1,8 @@
+.list {
+  position: relative;
+  overflow: auto;
+  height: 30em;
+}
+.dragover {
+  box-shadow: 0 0 1em blue;
+}
