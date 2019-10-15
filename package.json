@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "repository": "https://github.com/vkmarmot/virtualized-tree.git",
+  "bugs": {
+    "url": "https://github.com/vkmarmot/virtualized-tree/issues"
+  },
   "scripts": {
     "build": "npm run build:types && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
