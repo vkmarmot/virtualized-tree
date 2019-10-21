@@ -52,11 +52,11 @@ export const getVisibleIndexes = (
 
 export const expandOnDragEffect = (
   dragover: string | undefined,
-  onExpand: (dragover: string) => void
+  onExpand: (dragover: string, collapsed: boolean) => void
 ) => () => {
   if (dragover) {
     const tmt = setTimeout(() => {
-      onExpand(dragover);
+      onExpand(dragover, true);
     }, 1000);
     return () => {
       clearTimeout(tmt);

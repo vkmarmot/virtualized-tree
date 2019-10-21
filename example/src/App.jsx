@@ -43,14 +43,18 @@ export default class App extends Component {
           onReorder={(id, target) => {
             console.log(id, target);
           }}
-          onExpand={collapse}
+          setCollapsed={collapse}
           childrenHeight={19}
           tree={this.state.child}
         >
-          {(id, attributes, offset) => (
+          {({ id, offset }, attributes) => (
             <div
               {...attributes}
-              style={{ paddingLeft: `${offset * 50}px`, height: "19px" }}
+              style={{
+                ...attributes.style,
+                paddingLeft: `${offset * 50}px`,
+                height: "19px"
+              }}
               key={id}
               onClick={() => {
                 const newChild = this.state.child.map(ch => {
