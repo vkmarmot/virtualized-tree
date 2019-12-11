@@ -6,7 +6,7 @@ export const flatTree = (
 ): TreeElementWithOffset[] => {
   const result: TreeElementWithOffset[] = [];
   for (const elem of tree) {
-    result.push({ id: elem.id, collapsed: elem.collapsed, offset });
+    result.push({ ...elem, offset });
     if (elem.children && !elem.collapsed) {
       const child = flatTree(elem.children, offset + 1);
       result.push(...child);

@@ -4,9 +4,7 @@ export type TreeElement = {
   children?: TreeElement[];
 };
 
-export type TreeElementWithOffset = {
-  id: string;
-  collapsed: boolean;
+export type TreeElementWithOffset = TreeElement & {
   offset: number;
 };
 

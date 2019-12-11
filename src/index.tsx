@@ -17,6 +17,7 @@ interface IProps {
   tree: TreeElement[];
   childrenHeight: number;
   enableDrag?: boolean;
+  scrollTo?: string;
   children: (
     elem: TreeElementWithOffset,
     attributes: React.HTMLAttributes<any>
@@ -29,6 +30,7 @@ export const TreeComponent: React.FC<IProps> = ({
   children,
   childrenHeight,
   onReorder,
+  scrollTo,
 
   enableDrag,
   setCollapsed,
@@ -38,9 +40,26 @@ export const TreeComponent: React.FC<IProps> = ({
   const [dragover, setDragover] = useState<string | undefined>(undefined);
   const ref = useRef<HTMLDivElement>(null);
   const state = useViewbox(ref);
-  useEffect(expandOnDragEffect(dragover, setCollapsed), [dragover]);
-
   const treeElementWithOffsets = flatTree(tree);
+  useEffect(expandOnDragEffect(dragover, setCollapsed), [dragover]);
+  useEffect(() => {
+    if (typeof scrollTo !== "undefined" && ref.current) {
+      let index = 0;
+      for (const elem of treeElementWithOffsets) {
+        if (elem.id === scrollTo) {
+          let posOfElement = index * childrenHeight;
+          let scrollTop = ref.current.scrollTop;
+          let height = ref.current.getBoundingClientRect().height;
+          if (posOfElement < scrollTop || posOfElement > scrollTop + height) {
+            ref.current.scrollTop = posOfElement - height / 2;
+          }
+          return;
+        }
+        index++;
+      }
+    }
+  }, [scrollTo]);
+
   const [min, maxUnCropped] = getVisibleIndexes(
     state.height,
     state.scrollTop,

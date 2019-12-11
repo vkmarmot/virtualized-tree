@@ -1,6 +1,6 @@
 {
   "name": "virtualized-tree",
-  "version": "1.2.0-beta.2",
+  "version": "1.2.0",
   "description": "",
   "main": "dist/index.js",
   "repository": "https://github.com/vkmarmot/virtualized-tree.git",
@@ -19,11 +19,8 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "react": "^16.6.3"
-  },
   "peerDependencies": {
-    "react": "^16.6.3"
+    "react": ">=16.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
