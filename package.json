@@ -1,6 +1,6 @@
 {
   "name": "virtualized-tree",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "main": "dist/index.js",
   "repository": "https://github.com/vkmarmot/virtualized-tree.git",

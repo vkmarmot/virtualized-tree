@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {useEffect, useMemo, useRef, useState} from "react";
 
 import {
   handleDrop,
@@ -40,7 +40,7 @@ export const TreeComponent: React.FC<IProps> = ({
   const [dragover, setDragover] = useState<string | undefined>(undefined);
   const ref = useRef<HTMLDivElement>(null);
   const state = useViewbox(ref);
-  const treeElementWithOffsets = flatTree(tree);
+  const treeElementWithOffsets = useMemo(() => flatTree(tree), [tree]);
   useEffect(expandOnDragEffect(dragover, setCollapsed), [dragover]);
   useEffect(() => {
     if (typeof scrollTo !== "undefined" && ref.current) {
