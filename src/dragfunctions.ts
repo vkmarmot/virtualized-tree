@@ -1,5 +1,6 @@
 import React from "react";
 import ResizeObserver from "resize-observer-polyfill";
+import "intersection-observer";
 import { findElementInTree } from "./functions";
 import { IState, TreeElementWithOffset } from "./types";
 
