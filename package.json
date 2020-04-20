@@ -1,6 +1,6 @@
 {
   "name": "virtualized-tree",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "",
   "main": "dist/index.js",
   "repository": "https://github.com/vkmarmot/virtualized-tree.git",
@@ -45,5 +45,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "intersection-observer": "^0.8.0",
+    "resize-observer-polyfill": "^1.5.1"
+  }
 }

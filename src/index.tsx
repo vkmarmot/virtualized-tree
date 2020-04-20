@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useRef, useState} from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
 import {
   handleDrop,
@@ -66,14 +66,23 @@ export const TreeComponent: React.FC<IProps> = ({
     childrenHeight
   );
   const max = Math.min(maxUnCropped, treeElementWithOffsets.length - 1);
+  const fullHeight = treeElementWithOffsets.length * childrenHeight;
   const handleDragEnd = onDragEnd(setDragover);
+  const startPlaceholderHeight = min * childrenHeight;
+  const endPlaceholderY = (max + 1) * childrenHeight;
+  const endPlaceholderHeight = fullHeight - endPlaceholderY;
+  const endPlaceholderTransform = `translate(0, ${endPlaceholderY}px)`;
   return (
     <div className={styles.list} ref={ref}>
       <div
         style={{
-          height: treeElementWithOffsets.length * childrenHeight
+          height: fullHeight
         }}
       >
+        <div
+          className={styles.treeStartPlaceholder}
+          style={{ height: `${startPlaceholderHeight}px` }}
+        />
         {treeElementWithOffsets.slice(min, max + 1).map((elem, pos) => {
           const draggableData = enableDrag
             ? {
@@ -103,6 +112,14 @@ export const TreeComponent: React.FC<IProps> = ({
             ...draggableData
           });
         })}
+        <div
+          className={styles.treeEndPlaceholder}
+          style={{
+            height: `${endPlaceholderHeight}px`,
+            transform: endPlaceholderTransform,
+            WebkitTransform: endPlaceholderTransform
+          }}
+        />
       </div>
     </div>
   );

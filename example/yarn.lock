@@ -4857,6 +4857,11 @@ internal-ip@^4.2.0:
     default-gateway "^4.2.0"
     ipaddr.js "^1.9.0"
 
+intersection-observer@^0.8.0:
+  version "0.8.0"
+  resolved "http://npm.stc-spb.ru/intersection-observer/-/intersection-observer-0.8.0.tgz#e61274136f81dc114a7340a0b2e7a30b9787c438"
+  integrity sha512-o5nSHpitRPDRPe9NDBJNwKp24Wa11xQSDPOg/s6PsWIaGRoAOwBoMMY1R/UmlezBohjdFW6W4kJ9rkm3jCK+Hg==
+
 invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "http://npm.stc-spb.ru/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
@@ -8065,15 +8070,6 @@ react-is@^16.8.4:
   resolved "http://npm.stc-spb.ru/react-is/-/react-is-16.10.2.tgz#984120fd4d16800e9a738208ab1fba422d23b5ab"
   integrity sha512-INBT1QEgtcCCgvccr5/86CfD71fw9EPmDxgiJX4I2Ddr6ZsV6iFXsuby+qWJPtmNuMY0zByTsG4468P7nHuNWA==
 
-react@^16.6.3:
-  version "16.10.2"
-  resolved "http://npm.stc-spb.ru/react/-/react-16.10.2.tgz#a5ede5cdd5c536f745173c8da47bda64797a4cf0"
-  integrity sha512-MFVIq0DpIhrHFyqLU0S3+4dIcBhhOvBE8bJ/5kHPVOVaGdo0KuiQzpcjCPsf585WvhypqtrMILyoE2th6dT+Lw==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-
 read-pkg-up@^2.0.0:
   version "2.0.0"
   resolved "http://npm.stc-spb.ru/read-pkg-up/-/read-pkg-up-2.0.0.tgz#6b72a8048984e0c41e79510fd5e9fa99b3b549be"
@@ -8323,6 +8319,11 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "http://npm.stc-spb.ru/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
+
+resize-observer-polyfill@^1.5.1:
+  version "1.5.1"
+  resolved "http://npm.stc-spb.ru/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
+  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
 
 resolve-cwd@^2.0.0:
   version "2.0.0"

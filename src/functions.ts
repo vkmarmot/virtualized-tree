@@ -16,7 +16,7 @@ export const flatTree = (
   return result;
 };
 
-export const findElementInDree = (
+export const findElementInTree = (
   tree: TreeElementWithOffset[],
   id: string
 ): TreeElementWithOffset | undefined => {
