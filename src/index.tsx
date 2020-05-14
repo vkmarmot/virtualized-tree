@@ -45,7 +45,8 @@ export const TreeComponent: React.FC<IProps> = ({
   useEffect(() => {
     if (typeof scrollTo !== "undefined" && ref.current) {
       let index = 0;
-      for (const elem of treeElementWithOffsets) {
+      for (let i = 0; i < treeElementWithOffsets.length; i++){
+        const elem = treeElementWithOffsets[i];
         if (elem.id === scrollTo) {
           let posOfElement = index * childrenHeight;
           let scrollTop = ref.current.scrollTop;
