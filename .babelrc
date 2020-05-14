@@ -1,7 +1,14 @@
 {
   "presets": [
     [
-      "@babel/env"
+      "@babel/env",
+      {
+        "targets": {
+          "firefox": "40",
+          "chrome": "17",
+          "ie": "11"
+        }
+      }
     ],
     "@babel/preset-react",
     ["@babel/preset-typescript", {

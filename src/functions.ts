@@ -5,7 +5,8 @@ export const flatTree = (
   offset = 0
 ): TreeElementWithOffset[] => {
   const result: TreeElementWithOffset[] = [];
-  for (const elem of tree) {
+  for (let i = 0; i < tree.length; i++){
+    const elem = tree[i];
     result.push({ ...elem, offset });
     if (elem.children && !elem.collapsed) {
       const child = flatTree(elem.children, offset + 1);
@@ -20,7 +21,8 @@ export const findElementInTree = (
   tree: TreeElementWithOffset[],
   id: string
 ): TreeElementWithOffset | undefined => {
-  for (const elem of tree) {
+  for (let i = 0; i < tree.length; i++){
+    const elem = tree[i];
     if (elem.id === id) {
       return elem;
     }

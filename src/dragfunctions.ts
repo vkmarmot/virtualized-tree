@@ -91,7 +91,8 @@ export const updateScrollEffect = (
       return;
     }
     // const { scrollTop } = ref.current;
-    for (const entry of entries) {
+    for (let i = 0; i < entries.length; i++){
+      const entry = entries[i];
       if (entry.isIntersecting) {
         let newScrollTOp = 0;
         if (entry.target === start) {
