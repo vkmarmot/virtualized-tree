@@ -86,34 +86,40 @@ export const updateScrollEffect = (
   state: IState,
   setState: (e: { height: number; scrollTop: number }) => void
 ) => () => {
-  const updateScroll = (entries: IntersectionObserverEntry[]) => {
+  const updateScroll = () => {
     if (!ref.current) {
       return;
     }
-    // const { scrollTop } = ref.current;
-    for (let i = 0; i < entries.length; i++){
-      const entry = entries[i];
-      if (entry.isIntersecting) {
-        let newScrollTOp = 0;
-        if (entry.target === start) {
-            // Если пересечение с верхним блоком
-          newScrollTOp = entry.intersectionRect.top - entry.boundingClientRect.top;
-        } else {
-          if (entry.intersectionRect.height < state.height) {
-            newScrollTOp = entry.intersectionRect.height + state.scrollTop;
-          } else {
-           newScrollTOp = entry.intersectionRect.bottom - entry.boundingClientRect.top + state.scrollTop;
-          }
-        }
-        // console.log(newScrollTOp, scrollTop);
-        if (Math.abs(newScrollTOp - state.scrollTop) > 1e-4) {
-          setState({
-            ...state,
-            scrollTop: newScrollTOp
-          });
-        }
-        return;
-      }
+    const { scrollTop } = ref.current;
+    // for (let i = 0; i < entries.length; i++){
+    //   const entry = entries[i];
+      // if (entry.isIntersecting) {
+      //   let newScrollTOp = 0;
+      //   if (entry.target === start) {
+      //       // Если пересечение с верхним блоком
+      //     newScrollTOp = Math.max(entry.intersectionRect.top - entry.boundingClientRect.top, 0);
+      //   } else {
+      //     if (entry.intersectionRect.height < state.height) {
+      //       newScrollTOp = entry.intersectionRect.height + state.scrollTop;
+      //     } else {
+      //      newScrollTOp = entry.intersectionRect.bottom - entry.boundingClientRect.top + state.scrollTop;
+      //     }
+      //   }
+      //   // console.log(newScrollTOp, scrollTop);
+      //   if (Math.abs(newScrollTOp - state.scrollTop) > 1e-4) {
+      //     setState({
+      //       ...state,
+      //       scrollTop: newScrollTOp
+      //     });
+      //   }
+      //   return;
+      // }
+      // }
+    if (Math.abs(scrollTop - state.scrollTop) > 1e-4) {
+      setState({
+        ...state,
+        scrollTop
+      });
     }
   };
   const observer = new IntersectionObserver(updateScroll);
