@@ -29,6 +29,8 @@ module.exports = {
     ]
   },
   externals: {
+    "intersection-observer": { root: "intersection-observer", commonjs2: "intersection-observer", commonjs: "intersection-observer"  },
+    "resize-observer-polyfill": { root: "resize-observer-polyfill", commonjs2: "resize-observer-polyfill", commonjs: "resize-observer-polyfill"  },
     react: {
       root: "React",
       commonjs2: "react",

@@ -39,8 +39,8 @@ export const TreeComponent: React.FC<IProps> = ({
   // const [state, setState] = useState<IState>({ ...initialState });
   const [dragover, setDragover] = useState<string | undefined>(undefined);
   const ref = useRef<HTMLDivElement>(null);
-  const state = useViewbox(ref);
   const treeElementWithOffsets = useMemo(() => flatTree(tree), [tree]);
+  const state = useViewbox(ref, treeElementWithOffsets);
   useEffect(expandOnDragEffect(dragover, setCollapsed), [dragover]);
   useEffect(() => {
     if (typeof scrollTo !== "undefined" && ref.current) {
