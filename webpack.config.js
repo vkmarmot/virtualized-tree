@@ -9,7 +9,7 @@ module.exports = {
     filename: "index.js"
   },
   mode: "development",
-  devtool: "eval-source-map",
+  devtool: "eval",
   module: {
     rules: [
       {
